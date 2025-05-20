@@ -1,0 +1,61 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Notas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    input, button {
+      margin: 5px;
+      padding: 8px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Agregar Estudiante</h2>
+
+  <input type="text" id="nombre" placeholder="Nombre">
+  <input type="text" id="apellido" placeholder="Apellido">
+  <input type="number" id="nota" placeholder="Nota (1.0 - 7.0)" step="0.1" min="1" max="7">
+  <button onclick="agregarFila()">Agregar</button>
+
+  <table id="tablaNotas">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Nota</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Filas se agregarán aquí -->
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2"><strong>Promedio General </strong></td>
+        <td id="promedio">-</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- Vincula el archivo JavaScript -->
+  <script src="js.js"></script>
+
+</body>
+</html>
